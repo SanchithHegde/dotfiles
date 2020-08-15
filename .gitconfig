@@ -1,0 +1,51 @@
+[core]
+    editor = micro
+    abbrev = 12
+    pager = diff-so-fancy | less --tabs=4 -RFX
+
+[user]
+    name = Sanchith Hegde
+    email = sanchith.hegde01@gmail.com
+    signingkey = 3D39F4D2F1B4152D
+
+[color]
+    ui = true
+
+[commit]
+    gpgsign = true
+
+[merge]
+    log = true
+
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+
+[status]
+    submodulesummary = true
+
+[alias]
+    root = rev-parse --show-toplevel
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[diff]
+    noprefix = true
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+    insteadOf = git://github.com/
