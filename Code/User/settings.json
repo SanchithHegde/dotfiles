@@ -1,0 +1,112 @@
+{
+  /* **************** Workbench and Editor Settings **************** */
+
+  // Window
+  "window.menuBarVisibility": "default",
+  "window.titleBarStyle": "custom",
+
+  // Workbench
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Ayu Dark Bordered",
+  "workbench.iconTheme": "ayu",
+  "workbench.settings.editor": "json",
+
+  // Editor
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+
+  // Terminal
+  "terminal.external.linuxExec": "konsole",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.shell.linux": "/bin/zsh",
+
+  // Telemetry
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+
+  // Debugger
+  "debug.allowBreakpointsEverywhere": true,
+
+  /* **************** Extensions Settings **************** */
+
+  // Bracket Pair Colorizer
+  "bracket-pair-colorizer-2.colorMode": "Consecutive",
+  "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+  "bracket-pair-colorizer-2.showBracketsInGutter": true,
+
+  // Even Better TOML
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.compactArrays": false,
+  "evenBetterToml.formatter.compactInlineTables": false,
+  "evenBetterToml.formatter.indentTables": true,
+  "evenBetterToml.formatter.reorderKeys": false,
+
+  // Git
+  "gitlens.defaultDateStyle": "absolute",
+  "gitlens.views.fileHistory.location": "explorer",
+  "scm.diffDecorations": "all",
+
+  // IntelliCode
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  // Rust-Analyzer
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "rust-analyzer.updates.channel": "nightly",
+
+  /* **************** Language Extension Settings **************** */
+
+  // Go
+  "go.useLanguageServer": true,
+
+  // Python
+  "python.languageServer": "Microsoft",
+  "python.showStartPage": false,
+
+  /* **************** Language Settings **************** */
+
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.renderFinalNewline": true,
+    "editor.rulers": [99],
+    "editor.trimAutoWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
+
+  "[shellscript]": {
+    "editor.tabSize": 2,
+    "files.eol": "\n"
+  }
+}
