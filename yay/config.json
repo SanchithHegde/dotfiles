@@ -1,0 +1,9 @@
+{
+	"removemake": "ask",
+	"sudoloop": true,
+	"upgrademenu": true,
+	"cleanmenu": true,
+	"diffmenu": true,
+	"editmenu": true,
+	"combinedupgrade": true
+}
