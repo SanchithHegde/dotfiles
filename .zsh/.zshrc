@@ -122,6 +122,15 @@ zinit wait lucid light-mode from'gh-r' id-as'zoxide' as'program' mv'zoxide* -> z
   pick'zoxide' src='zoxide.zsh' for \
     ajeetdsouza/zoxide
 
+# zoxide aliases
+z() {
+  if [[ $1 == "-i" ]]; then
+    __zoxide_zi ${@:2}
+  else
+    __zoxide_z ${@:1}
+  fi
+}
+
 # Direnv
 zinit wait lucid light-mode from'gh-r' id-as'direnv' as'program' mv'direnv* -> direnv' \
   atclone'./direnv hook zsh > direnv_hook.zsh' atpull'%atclone' \
