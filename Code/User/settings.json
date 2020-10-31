@@ -15,8 +15,11 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
+  "editor.fontSize": 16,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.letterSpacing": 1.0,
+  "editor.lineHeight": 22,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.suggestSelection": "first",
@@ -26,6 +29,9 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.letterSpacing": 1.0,
+  "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.shell.linux": "/bin/zsh",
 
   // Telemetry
