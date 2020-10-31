@@ -109,7 +109,7 @@ zinit wait lucid light-mode for \
     zdharma/fast-syntax-highlighting \
   atload'!_zsh_autosuggest_start' \
     zsh-users/zsh-autosuggestions \
-  blockf atpull'zinit creinstall -q .' atload'zicompinit; zi cdreplay -q' \
+  blockf atpull'zinit creinstall zsh-users/zsh-autosuggestions' atload'zicompinit; zi cdreplay -q' \
     zsh-users/zsh-completions
 
 #
