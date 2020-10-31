@@ -1,0 +1,23 @@
+# Per-project Postgres
+# Usage: `layout postgres database_name`
+layout_postgres() {
+  export PGDATA="$(direnv_layout_dir)/postgres"
+  export PGHOST="$PGDATA"
+  export PSQL_HISTORY="$PGDATA/.psql_history"
+
+  if [ -n "$1" ]; then
+    export PGDATABASE="$1"
+  else
+    export PGDATABASE="$USER"
+  fi
+
+  if [[ ! -d "$PGDATA" ]]; then
+    initdb
+    cat >>"$PGDATA/postgresql.conf" <<-EOF
+			listen_addresses = ''
+			unix_socket_directories = '$PGHOST'
+		EOF
+
+    echo "CREATE DATABASE ${PGDATABASE};" | postgres --single -E postgres
+  fi
+}
