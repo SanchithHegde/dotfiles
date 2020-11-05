@@ -12,11 +12,14 @@
 [color]
     ui = true
 
+[commit]
+    gpgsign = true
+
 [diff]
     colorMoved = default
 
-[commit]
-    gpgsign = true
+[init]
+	defaultBranch = main
 
 [merge]
     log = true
