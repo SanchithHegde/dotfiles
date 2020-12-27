@@ -143,10 +143,10 @@ zinit wait lucid light-mode from'gh-r' id-as'direnv' as'program' mv'direnv* -> d
   pick'direnv' src='direnv_hook.zsh' for \
     direnv/direnv
 
-# Diff-so-fancy
-zinit wait lucid light-mode from'gh' id-as'diff-so-fancy' as'program' \
-  pick'diff-so-fancy' for \
-    so-fancy/diff-so-fancy
+# delta
+zinit wait lucid light-mode from'gh-r' id-as'delta' as'program' \
+  mv'delta*/delta -> delta' pick'delta' for \
+    dandavison/delta
 
 # Load SSH and PGP keys using keychain
 eval $(keychain --eval --quiet git_ssh 909C6EA799D40276 --agents ssh,gpg)
