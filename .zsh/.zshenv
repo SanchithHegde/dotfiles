@@ -1,6 +1,11 @@
 # Discard duplicates for both $PATH and $path
 typeset -U PATH path
-path=($path "$HOME/.local/bin" "$HOME/.cargo/bin" )
+path=(
+    $path
+    "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
+    "$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
+)
 
 # Set XDG base directories
 # User directories
