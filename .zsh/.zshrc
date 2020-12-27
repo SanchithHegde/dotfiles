@@ -148,5 +148,5 @@ zinit wait lucid light-mode from'gh' id-as'diff-so-fancy' as'program' \
   pick'diff-so-fancy' for \
     so-fancy/diff-so-fancy
 
-# Load the SSH and GPG keys using keychain
-eval $(keychain --eval --quiet git_ssh 3D39F4D2F1B4152D --agents ssh,gpg)
+# Load SSH and PGP keys using keychain
+eval $(keychain --eval --quiet git_ssh 909C6EA799D40276 --agents ssh,gpg)
