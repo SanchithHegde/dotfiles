@@ -14,6 +14,3 @@ export XDG_CONFIG_DIRS=/etc/xdg
 # Set editors
 export EDITOR=micro
 export VISUAL=micro
-
-# Set LC_ALL for proper rendering of some Unicode sequences
-export LC_ALL=en_US.UTF-8
