@@ -57,9 +57,15 @@ setopt notify                   # Report the status of background jobs immediate
 # Aliases
 #
 
-alias ls='ls --color=auto' ll='ls -lAh'
-alias df='df -h' du='du -h'
-alias cp='cp -v' mv='mv -v'
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -l --almost-all --human-readable'
+alias df='df --human-readable'
+alias du='du --human-readable'
+alias cp='cp --verbose'
+alias mv='mv --verbose'
+alias exal='exa --long --all --binary --header'
+alias ip='ip --color'
+alias ncdu='ncdu -rr --color dark'
 
 alias ..='cd ..'
 alias ...='cd ../..'
