@@ -94,7 +94,6 @@
 
   "[rust]": {
     "editor.defaultFormatter": "matklad.rust-analyzer",
-    "editor.formatOnSave": true,
     "editor.renderFinalNewline": true,
     "editor.rulers": [99],
     "editor.trimAutoWhitespace": true,
