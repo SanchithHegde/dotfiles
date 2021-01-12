@@ -37,6 +37,8 @@
   // Telemetry
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
+  "extensions.ignoreRecommendations": true,
+  "npm.fetchOnlinePackageInfo": false,
 
   // Debugger
   "debug.allowBreakpointsEverywhere": true,
