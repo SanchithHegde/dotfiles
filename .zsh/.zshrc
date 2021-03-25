@@ -1,3 +1,6 @@
+# Load SSH and PGP keys using keychain
+eval $(keychain --eval --quiet git_ssh 909C6EA799D40276 --agents ssh,gpg)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -148,5 +151,3 @@ zinit wait lucid light-mode from'gh-r' id-as'delta' as'program' \
   mv'delta*/delta -> delta' pick'delta' for \
     dandavison/delta
 
-# Load SSH and PGP keys using keychain
-eval $(keychain --eval --quiet git_ssh 909C6EA799D40276 --agents ssh,gpg)
