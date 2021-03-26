@@ -52,9 +52,13 @@
 
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
+  "rust-analyzer.assist.importMergeBehavior": "full",
+  "rust-analyzer.assist.importPrefix": "by_crate",
+  "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.cargo.allFeatures": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+  "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.updates.channel": "nightly",
 
   "go.useLanguageServer": true,
