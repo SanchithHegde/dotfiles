@@ -8,6 +8,9 @@
   "workbench.settings.editor": "json",
 
   "editor.acceptSuggestionOnEnter": "off",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
