@@ -29,7 +29,12 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.letterSpacing": 1.0,
   "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.shell.linux": "/bin/zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh"
+    }
+  },
 
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
