@@ -49,10 +49,12 @@
   "bracket-pair-colorizer-2.showBracketsInGutter": true,
 
   "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.columnWidth": 99,
   "evenBetterToml.formatter.compactArrays": false,
   "evenBetterToml.formatter.compactInlineTables": false,
-  "evenBetterToml.formatter.indentTables": true,
+  "evenBetterToml.formatter.indentTables": false,
   "evenBetterToml.formatter.reorderKeys": false,
+  "evenBetterToml.semanticTokens": true,
 
   "gitlens.defaultDateStyle": "absolute",
   "gitlens.views.fileHistory.location": "explorer",
