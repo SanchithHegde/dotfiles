@@ -83,7 +83,7 @@ alias ......='cd ../../../../..'
 
 if [[ ! -f $ZDOTDIR/.zinit/bin/zinit.zsh ]]; then
   command mkdir -p "$ZDOTDIR/.zinit" && command chmod g-rwX "$ZDOTDIR/.zinit"
-  command git clone https://github.com/zdharma/zinit "$ZDOTDIR/.zinit/bin"
+  command git clone https://github.com/zdharma-continuum/zinit "$ZDOTDIR/.zinit/bin"
 fi
 
 source "$ZDOTDIR/.zinit/bin/zinit.zsh"
@@ -116,7 +116,7 @@ fpath=( $ZDOTDIR/.zfunc $fpath )
 # Fast-syntax-highlighting & autosuggestions
 zinit wait lucid light-mode for \
   atinit'ZINIT[COMPINIT_OPTS]=-C' \
-    zdharma/fast-syntax-highlighting \
+    zdharma-continuum/fast-syntax-highlighting \
   atload'!_zsh_autosuggest_start' \
     zsh-users/zsh-autosuggestions \
   blockf atpull'zinit creinstall zsh-users/zsh-autosuggestions' atload'zicompinit; zi cdreplay -q' \
