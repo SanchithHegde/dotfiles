@@ -8,6 +8,7 @@
   "workbench.settings.editor": "json",
 
   "editor.acceptSuggestionOnEnter": "off",
+  "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
