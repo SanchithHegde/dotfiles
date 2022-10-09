@@ -1,10 +1,11 @@
 {
-  "window.menuBarVisibility": "default",
+  "window.commandCenter": true,
+  "window.menuBarVisibility": "classic",
   "window.titleBarStyle": "custom",
 
-  "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Ayu Dark Bordered",
-  "workbench.iconTheme": "ayu",
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
   "workbench.settings.editor": "json",
 
   "editor.acceptSuggestionOnEnter": "off",
@@ -12,15 +13,21 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "Iosevka Term, JetBrains Mono, Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "onUnlessPressed",
   "editor.letterSpacing": 1.0,
   "editor.lineHeight": 22,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
+  "editor.semanticTokenColorCustomizations": {
+    "[Material Theme Darker High Contrast]": {
+      "enabled": true
+    }
+  },
   "editor.suggestSelection": "first",
 
   "terminal.external.linuxExec": "konsole",
@@ -37,19 +44,15 @@
     }
   },
 
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   "extensions.ignoreRecommendations": true,
   "npm.fetchOnlinePackageInfo": false,
 
   "debug.allowBreakpointsEverywhere": true,
 
 
-  "bracket-pair-colorizer-2.colorMode": "Consecutive",
-  "bracket-pair-colorizer-2.forceIterationColorCycle": true,
-  "bracket-pair-colorizer-2.showBracketsInGutter": true,
 
-  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.alignEntries": false,
   "evenBetterToml.formatter.columnWidth": 99,
   "evenBetterToml.formatter.compactArrays": false,
   "evenBetterToml.formatter.compactInlineTables": false,
@@ -57,20 +60,39 @@
   "evenBetterToml.formatter.reorderKeys": false,
   "evenBetterToml.semanticTokens": true,
 
+  // Git
+  // "git.autofetch": "all",
+  "git.autofetch": false,
+  "git.autofetchPeriod": 600,
+  "git.branchSortOrder": "committerdate",
+  "git.branchWhitespaceChar": "-",
+  "git.closeDiffOnOperation": true,
+  "git.confirmEmptyCommits": true,
+  "git.decorations.enabled": true,
+  "git.detectSubmodules": true,
+  "git.enableCommitSigning": true,
+  "git.enabled": true,
+  "git.promptToSaveFilesBeforeCommit": "always",
+  "git.promptToSaveFilesBeforeStash": "always",
+  "git.timeline.date": "authored",
+  "git.useEditorAsCommitInput": true,
   "gitlens.defaultDateStyle": "absolute",
-  "gitlens.views.fileHistory.location": "explorer",
+  "gitlens.defaultGravatarsStyle": "identicon",
+  "scm.defaultViewMode": "tree",
   "scm.diffDecorations": "all",
+  "scm.diffDecorationsIgnoreTrimWhitespace": "false",
 
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "material-icon-theme.folders.color": "#42a5f5",
+  "material-icon-theme.folders.theme": "specific",
 
-  "rust-analyzer.assist.importMergeBehavior": "full",
-  "rust-analyzer.assist.importPrefix": "by_crate",
-  "rust-analyzer.completion.autoimport.enable": true,
-  "rust-analyzer.cargo.allFeatures": true,
+  "materialTheme.accent": "Blue",
+  "rust-analyzer.cargo.features": "all",
   "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
-  "rust-analyzer.procMacro.enable": true,
-  "rust-analyzer.updates.channel": "nightly",
+  "rust-analyzer.imports.granularity.enforce": true,
+  "rust-analyzer.imports.granularity.group": "crate",
+  "rust-analyzer.imports.prefix": "crate",
 
   "go.useLanguageServer": true,
 
@@ -108,7 +130,7 @@
   },
 
   "[rust]": {
-    "editor.defaultFormatter": "matklad.rust-analyzer",
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.renderFinalNewline": true,
     "editor.rulers": [99],
     "editor.trimAutoWhitespace": true,
@@ -120,5 +142,13 @@
   "[shellscript]": {
     "editor.tabSize": 2,
     "files.eol": "\n"
+  },
+
+  "[toml]": {
+    "editor.renderFinalNewline": true,
+    "editor.trimAutoWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
   }
 }
