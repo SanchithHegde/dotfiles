@@ -78,68 +78,66 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 #
-# Zinit
+# zgenom
 #
 
-if [[ ! -f $ZDOTDIR/.zinit/bin/zinit.zsh ]]; then
-  command mkdir -p "$ZDOTDIR/.zinit" && command chmod g-rwX "$ZDOTDIR/.zinit"
-  command git clone https://github.com/zdharma-continuum/zinit "$ZDOTDIR/.zinit/bin"
+if [[ ! -f $ZDOTDIR/zgenom/zgenom.zsh ]]; then
+  command git clone https://github.com/jandamm/zgenom.git "$ZDOTDIR/zgenom"
+  command mkdir -p "$ZDOTDIR" && command chmod g-rwX "$ZDOTDIR/zgenom"
 fi
 
-source "$ZDOTDIR/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# Source zgenom
+source "${ZDOTDIR}/zgenom/zgenom.zsh"
 
-# Keybindings from OMZL
-zinit ice silent light
-zinit snippet OMZL::key-bindings.zsh
+# If the zgenom init script doesn't exist
+if ! zgenom saved; then
+  zgenom compdef
 
-# Powerlevel10k
-zinit lucid light-mode atload'!source $ZDOTDIR/.p10k.zsh' id-as'powerlevel10k' for \
-  romkatv/powerlevel10k
+  # ohmyzsh keybindings
+  zgenom ohmyzsh lib/key-bindings.zsh
 
-# OMZ Plugins and Libs
-zinit wait lucid light-mode for \
-  OMZL::termsupport.zsh \
-  OMZP::git/git.plugin.zsh \
-  OMZP::gitignore/gitignore.plugin.zsh
+  # Powerlevel10k
+  zgenom load romkatv/powerlevel10k powerlevel10k
 
-# LS_COLORS
-zinit wait lucid light-mode from'gh' atclone'dircolors -b LS_COLORS > clrs.zsh' \
-  atpull'%atclone' pick'clrs.zsh' nocompile'!' \
-  atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' for \
-    trapd00r/LS_COLORS
+  # Library files from ohmyzsh
+  zgenom ohmyzsh lib/functions.zsh
+  zgenom ohmyzsh lib/termsupport.zsh
+  zgenom ohmyzsh plugins/git
+  zgenom ohmyzsh plugins/gitignore
+
+  # LS_COLORS
+  zgenom load trapd00r/LS_COLORS lscolors.sh
+
+  # Syntax highlighting
+  zgenom load zsh-users/zsh-syntax-highlighting
+
+  # Auto-suggestions
+  zgenom load zsh-users/zsh-autosuggestions
+
+  # Completions
+  zgenom load zsh-users/zsh-completions
+
+  # Save plugins to init script
+  zgenom save
+
+  # Compile files
+  zgenom compile "${ZDOTDIR}/zgenom/zgenom.zsh"
+  zgenom compile "${ZDOTDIR}/.p10k.zsh"
+fi
 
 # Path to zsh completion scripts
 fpath=( $ZDOTDIR/.zfunc $fpath )
 
-# Fast-syntax-highlighting & autosuggestions
-zinit wait lucid light-mode for \
-  atinit'ZINIT[COMPINIT_OPTS]=-C' \
-    zdharma-continuum/fast-syntax-highlighting \
-  atload'!_zsh_autosuggest_start' \
-    zsh-users/zsh-autosuggestions \
-  blockf atpull'zinit creinstall zsh-users/zsh-autosuggestions' atload'zicompinit; zi cdreplay -q' \
-    zsh-users/zsh-completions
 
-#
-# Add Programs to $PATH
-#
+# Source Powerlevel10k configuration
+source "${ZDOTDIR}/.p10k.zsh"
+
+# Load LS_COLORS
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 
 # zoxide
-eval "$(zoxide init zsh --no-aliases)"
+eval "$(zoxide init zsh)"
 
-# zoxide aliases
-z() {
-  if [[ $1 == "-i" ]]; then
-    __zoxide_zi ${@:2}
-  else
-    __zoxide_z ${@:1}
-  fi
-}
+# direnv
+eval "$(direnv hook zsh)"
 
-# Direnv
-zinit wait lucid light-mode from'gh-r' id-as'direnv' as'program' mv'direnv* -> direnv' \
-  atclone'./direnv hook zsh > direnv_hook.zsh' atpull'%atclone' \
-  pick'direnv' src='direnv_hook.zsh' for \
-    direnv/direnv
